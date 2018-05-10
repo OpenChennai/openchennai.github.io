@@ -2,3 +2,27 @@
   background-color: white;
   padding: 10px;
 }
+
+a:link.social {
+  color: red;
+}
+
+a:visited.social {
+  color: black;
+}
+
+a:hover.social {
+  color: black;
+}
+
+a:focus.social {
+  color: black;
+}
+
+a:active.social {
+  color: black;
+}
+
+a.social {
+  text-decoration: none !important;
+}
