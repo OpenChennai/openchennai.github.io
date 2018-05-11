@@ -3,23 +3,23 @@
   padding: 10px;
 }
 
-a:link.social {
-  color: red;
-}
-
-a:visited.social {
+a:link {
   color: black;
 }
 
-a:hover.social {
+a:visited {
   color: black;
 }
 
-a:focus.social {
-  color: black;
+a:hover {
+  color: gray;
 }
 
-a:active.social {
+a:focus {
+  color: gray;
+}
+
+a:active {
   color: black;
 }
 
