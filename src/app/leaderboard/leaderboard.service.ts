@@ -6,10 +6,11 @@ export class LeaderboardService {
 
   BASE_URL = 'https://api.github.com/repos/OpenChennai';
 
+  // TODO: Remove Community and GitHub page project from this list
   repositories = [
     'Community',
     'Roads',
-    'Water-and-Santitation',
+    'Water-and-Sanitation',
     'Electricity',
     'Garbage',
     'Public-Transport',
@@ -22,12 +23,8 @@ export class LeaderboardService {
   constructor(private http: HttpClient) {
   }
 
-  getIssues() {
-    const repo = 'Community';
-    // this.repositories.forEach((repo, _) => {
-      const url = this.BASE_URL + '/' + repo + '/issues';
-
-      return this.http.get(url);
-    // });
+  getIssues(repo) {
+    const url = this.BASE_URL + '/' + repo + '/issues';
+    return this.http.get(url);
   }
 }
