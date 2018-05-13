@@ -8,7 +8,7 @@ export class LeaderboardService {
 
   // TODO: Remove Community and GitHub page project from this list
   repositories = [
-    'Community',
+    // 'Community',
     'Roads',
     'Water-and-Sanitation',
     'Electricity',
@@ -16,8 +16,8 @@ export class LeaderboardService {
     'Public-Transport',
     'Traffic',
     'Parks-and-Playgrounds',
-    'Trees',
-    'openchennai.github.io'
+    'Trees'
+    // 'openchennai.github.io'
   ];
 
   constructor(private http: HttpClient) {
