@@ -23,4 +23,6 @@ export class AppComponent {
     'Trees'
     // 'openchennai.github.io'
   ];
+
+  PAT = '';
 }
