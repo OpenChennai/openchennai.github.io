@@ -1,0 +1,27 @@
+<div fxFlex="30" fxFlex.xs="80" style="border: 1px solid #e0e0e0; padding: 16px;">
+  <h3>Issue Form</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Your name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="link">Link to your social network account</label>
+      <input type="text" class="form-control" id="link" required>
+    </div>
+
+    <label for="section">Issue section</label>
+    <select class="form-control" id="section" required>
+      <option *ngFor="let section of app.repositories" [value]="section">{{section}}</option>
+    </select>
+
+    <div class="form-group">
+      <label for="description">Description of issue</label>
+      <textarea class="form-control" id="description" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>

@@ -6,10 +6,12 @@
         <img style="max-width: 100%; max-height: 100%;" alt="Angular Logo"
              src="../assets/OpenChennaiHorizontalLogo.png">
       </div>
-      <div fxFlex="80" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutGap="20px">
-        <div><h3><a class="menu" href="/">Home</a></h3></div>
-        <div><h3><a class="menu" href="#FAQ">FAQ</a></h3></div>
-        <div><h3><a class="menu" href="#Leaderboard">Leaderboard</a></h3></div>
+      <div fxFlex="80" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutGap="20px"
+           style="padding-top: 8px;">
+        <div><h4><a class="menu" href="/">Home</a></h4></div>
+        <div><h4><a class="menu" href="#FAQ">FAQ</a></h4></div>
+        <div><h4><a class="menu" href="#Leaderboard">Leaderboard</a></h4></div>
+        <div><h4><a class="menu" href="#ReportIssue">Report Issue</a></h4></div>
       </div>
     </div>
 
@@ -18,7 +20,8 @@
 
     <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
       <div fxFlex="60" style="text-align: center;">
-        <iframe style="height: 100%; min-height: 100%; width:80%; min-width: 80%" src="https://www.youtube-nocookie.com/embed/LMVhzLWFWNE?rel=0" frameborder="0"
+        <iframe style="height: 100%; min-height: 100%; width:80%; min-width: 80%"
+                src="https://www.youtube-nocookie.com/embed/LMVhzLWFWNE?rel=0" frameborder="0"
                 allow="encrypted-media" allowfullscreen></iframe>
       </div>
       <div fxFlex="40" fxLayout="column">
@@ -30,22 +33,34 @@
           <div>Follow us on social networks:</div>
           <div style="margin-top: 24px;">
             <a target="_blank" rel="noopener" class="social" href="https://twitter.com/openchennai">
-              <div><fa-icon [icon]="['fab', 'twitter']"></fa-icon> Twitter - OpenChennai</div>
+              <div>
+                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                Twitter - OpenChennai
+              </div>
             </a>
           </div>
           <div style="margin-top: 24px;">
             <a target="_blank" rel="noopener" class="social" href="https://www.facebook.com/openchennai">
-              <div><fa-icon [icon]="['fab', 'facebook']"></fa-icon> Facebook - OpenChennai</div>
+              <div>
+                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                Facebook - OpenChennai
+              </div>
             </a>
           </div>
           <div style="margin-top: 24px;">
             <a target="_blank" rel="noopener" class="social" href="https://www.instagram.com/openchennai">
-              <div><fa-icon [icon]="['fab', 'instagram']"></fa-icon> Instagram - OpenChennai</div>
+              <div>
+                <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+                Instagram - OpenChennai
+              </div>
             </a>
           </div>
           <div style="margin-top: 24px;">
             <a target="_blank" rel="noopener" class="social" href="https://github.com/OpenChennai">
-              <div><fa-icon [icon]="['fab', 'github']"></fa-icon> GitHub - https://github.com/OpenChennai</div>
+              <div>
+                <fa-icon [icon]="['fab', 'github']"></fa-icon>
+                GitHub - https://github.com/OpenChennai
+              </div>
             </a>
           </div>
         </div>
@@ -55,95 +70,115 @@
     <br>
     <br>
     <hr>
-    <h2 id="FAQ" style="padding-top: 16px;">FAQ</h2>
-
-    <h3>What do we gain by reporting and tracking issues?</h3>
-    <div>We want to record concerns of citizens in an open manner and never lose track of them.</div>
-
-    <h3>Is any action guaranteed to fix the reported issues?</h3>
-    <div>We hope to get involved in taking action as well, but no promises for now.</div>
-
-    <h3>If no action is guaranteed, what is the actual benefit?</h3>
-    <div>Think of Wikipedia. Now imagine something like that for the city's civic issues. Documenting issues is the
-      first step towards solving them.
-    </div>
-
-    <h3>Is there any benefit for me, individually?</h3>
-    <div>We even have a leaderboard below, if you are into such things!</div>
-
-    <h3>Where do I view already reported issues?</h3>
     <div>
-      <div>We are currently using GitHub to track issues. Follow the links to find issues under different sections.
-      </div>
-      <ul>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Roads/issues">Roads</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Water-and-Sanitation/issues">Water and
-            Sanitation</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Electricity/issues">Electricity</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Garbage/issues">Garbage</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Public-Transport/issues">Public
-            Transport</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Traffic/issues">Traffic</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Trees/issues">Trees</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://github.com/OpenChennai/Parks-and-Playgrounds/issues">Parks and
-            Playgrounds</a>
-        </li>
+      <ul style="padding-left: 16px">
+        <h3 id="FAQ" style="padding-top: 16px;">FAQ</h3>
+
+        <li><h4>What do we gain by reporting and tracking issues?</h4></li>
+        <div>We want to record concerns of citizens in an open manner and never lose track of them.</div>
+
+        <li><h4>Is any action guaranteed to fix the reported issues?</h4></li>
+        <div>We hope to get involved in taking action as well, but no promises for now.</div>
+
+        <li><h4>If no action is guaranteed, what is the actual benefit?</h4></li>
+        <div>Think of Wikipedia. Now imagine something like that for the city's civic issues. Documenting issues is the
+          first step towards solving them.
+        </div>
+
+        <li><h4>Is there any benefit for me, individually?</h4></li>
+        <div>We even have a leaderboard below, if you are into such things!</div>
+
+        <li><h4>Where do I view already reported issues?</h4></li>
+        <div>
+          <div>We are currently using GitHub to track issues. Follow the links to find issues under different sections.
+          </div>
+          <ul>
+            <li>
+              <a target="_blank" rel="noopener" class="sections" href="https://github.com/OpenChennai/Roads/issues">Roads</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections"
+                 href="https://github.com/OpenChennai/Water-and-Sanitation/issues">Water and Sanitation</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections"
+                 href="https://github.com/OpenChennai/Electricity/issues">Electricity</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections" href="https://github.com/OpenChennai/Garbage/issues">Garbage</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections"
+                 href="https://github.com/OpenChennai/Public-Transport/issues">Public Transport</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections" href="https://github.com/OpenChennai/Traffic/issues">Traffic</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections" href="https://github.com/OpenChennai/Trees/issues">Trees</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" class="sections"
+                 href="https://github.com/OpenChennai/Parks-and-Playgrounds/issues">Parks and Playgrounds</a>
+            </li>
+          </ul>
+        </div>
+
+        <li><h4 id="ReportIssue">How do I report issues?</h4></li>
+        <div>There are 3 ways. Choose any 1 of the options below.</div>
+        <div>
+          <ol>
+            <li><h4>Reach out to us on social networks</h4></li>
+            <div>
+              <ul>
+                <li><a target="_blank" rel="noopener" href="https://twitter.com/openchennai">Send a tweet to us on
+                  @OpenChennai</a></li>
+                <li><a target="_blank" rel="noopener" href="https://www.facebook.com/openchennai/">Message us on
+                  Facebook - Open Chennai</a></li>
+                <li><a target="_blank" rel="noopener" href="https://www.instagram.com/openchennai">Mention @OpenChennai
+                  on
+                  Instagram</a></li>
+              </ul>
+            </div>
+            <li><h4>Raise a GitHub issue directly</h4></li>
+            <div>
+              Raise GitHub issues directly on the respective projects/repositories listed above. If you are not familiar
+              with raising GitHub
+              issues,
+              <a target="_blank" rel="noopener"
+                 href="https://help.github.com/articles/signing-up-for-a-new-github-account">create
+                a GitHub account</a>
+              and find out how to create issues
+              <a target="_blank" rel="noopener" href="https://help.github.com/articles/creating-an-issue">here</a>.
+            </div>
+            <li><h4>Fill a form</h4></li>
+            <div>Please use the form below to submit your issue:</div>
+            <app-issue-form></app-issue-form>
+          </ol>
+        </div>
+
+        <li><h4>Are there general guidelines for reporting an issue?</h4></li>
+        <div>
+          Use the following template at the beginning when creating a new issue:
+          <ul>
+            <li>Reporter: <i>name of reporter</i></li>
+            <li>Link: <i>link to their social account</i></li>
+            <li>Description: <i>description of the issue</i></li>
+          </ul>
+          Please be as detailed as you can and add photos, links to the geographical location of the issue, if possible.
+        </div>
+
+        <li><h4>Who is running this effort? What are your motivations?</h4></li>
+        <div>We are just a group of individuals coming together to solve our own problems. We have no affiliations to
+          any
+          political entity and our intention is to build a community of like-minded citizens to solve our city's
+          problems.
+        </div>
+
+        <br>
+        <hr>
       </ul>
     </div>
-
-    <h3>How do I report issues?</h3>
-    <div>
-      <h4>The easy way</h4>
-      <div>Report issues to us on
-        <a target="_blank" rel="noopener" href="https://twitter.com/openchennai">Twitter</a>,
-        <a target="_blank" rel="noopener" href="https://www.facebook.com/openchennai/">Facebook</a>
-        or on
-        <a target="_blank" rel="noopener" href="https://www.instagram.com/openchennai">Instagram</a>.
-      </div>
-      <h4>The better way</h4>
-      <div>
-        Raise GitHub issues on the respective repositories. If you are not familiar with raising GitHub
-        issues,
-        <a target="_blank" rel="noopener" href="https://help.github.com/articles/signing-up-for-a-new-github-account">create
-          a GitHub account</a>
-        and find out how to create issues
-        <a target="_blank" rel="noopener" href="https://help.github.com/articles/creating-an-issue">here</a>.
-      </div>
-    </div>
-
-    <h3>Are there general guidelines for reporting an issue?</h3>
-    <div>
-      Use the following template at the beginning when creating a new issue:
-      <ul>
-        <li>Reporter: <i>name of reporter</i></li>
-        <li>Link: <i>link to their social account</i></li>
-      </ul>
-      Please be as detailed as you can and add photos, links to the geographical location of the issue, if possible.
-    </div>
-
-    <h3>Who is running this effort? What are your motivations?</h3>
-    <div>We are just a group of individuals coming together to solve our own problems. We have no affiliations to any
-      political entity and our intention is to build a community of like-minded citizens to solve our city's problems.
-    </div>
-
-    <br>
-    <hr>
-
     <app-leaderboard></app-leaderboard>
   </div>
   <div fxFlex="10" fxFlex.xs="0"></div>

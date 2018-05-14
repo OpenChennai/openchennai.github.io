@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeaderboardService } from './leaderboard.service';
+import { AppComponent } from '../app.component';
 
 interface Reporter {
   name: string;
@@ -21,14 +22,15 @@ export class LeaderboardComponent implements OnInit {
   reporters: Reporter[] = [];
   responsesReceived = 0;
 
-  constructor(private service: LeaderboardService) {
+  constructor(private service: LeaderboardService,
+              private app: AppComponent) {
   }
 
   ngOnInit() {
     this.unsortedReps = [];
 
-    for (let i = 0; i < this.service.repositories.length; i++) {
-      this.service.getIssues(this.service.repositories[i]).subscribe((data) => {
+    for (let i = 0; i < this.app.repositories.length; i++) {
+      this.service.getIssues(this.app.repositories[i]).subscribe((data) => {
         this.data = data;
         this.processData();
         this.responsesReceived++;
@@ -79,7 +81,7 @@ export class LeaderboardComponent implements OnInit {
   }
 
   checkAndPrepareTable() {
-    if (this.responsesReceived === this.service.repositories.length) {
+    if (this.responsesReceived === this.app.repositories.length) {
       this.sortResults();
     }
   }

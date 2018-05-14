@@ -28,5 +28,17 @@ a.social {
 }
 
 a.menu {
-  text-decoration: none !important;
+  text-decoration: none !important
+}
+
+a.sections {
+  text-decoration: underline !important;
+}
+
+.formInput {
+  margin-top: 8px;
+}
+
+h4 {
+  font-weight: bold;
 }
