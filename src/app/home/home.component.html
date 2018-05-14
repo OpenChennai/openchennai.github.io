@@ -1,52 +1,61 @@
 <div fxLayout="row">
-  <div fxFlex="20" fxFlex.xs="0"></div>
-  <div fxFlex="60" fxFlex.xs="100" id="main-content">
-    <div style="text-align:center">
-      <img fxFlex="30" fxFlex.xs="100" alt="Angular Logo" src="../assets/OpenChennai_logo.png">
-    </div>
-    <hr>
-    <br>
-    <div fxFlex="100" fxLayout="row" style="text-align:center">
-      <div fxFlex="25">
-        <a target="_blank" rel="noopener" class="social" href="https://twitter.com/openchennai">
-          <div>
-            <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
-          </div>
-          <div>Twitter</div>
-        </a>
+  <div fxFlex="10" fxFlex.xs="0"></div>
+  <div fxFlex="80" fxFlex.xs="100" id="main-content">
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="20" fxFlex.xs="100">
+        <img style="max-width: 100%; max-height: 100%;" alt="Angular Logo"
+             src="../assets/OpenChennaiHorizontalLogo.png">
       </div>
-      <div fxFlex="25">
-        <a target="_blank" rel="noopener" class="social" href="https://www.facebook.com/openchennai">
-          <div>
-            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
-          </div>
-          <div>Facebook</div>
-        </a>
-      </div>
-      <div fxFlex="25">
-        <a target="_blank" rel="noopener" class="social" href="https://www.instagram.com/openchennai">
-          <div>
-            <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
-          </div>
-          <div>Instagram</div>
-        </a>
-      </div>
-      <div fxFlex="25">
-        <a target="_blank" rel="noopener" class="social" href="https://github.com/OpenChennai">
-          <div>
-            <fa-icon [icon]="['fab', 'github']"></fa-icon>
-          </div>
-          <div>GitHub</div>
-        </a>
+      <div fxFlex="80" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutGap="20px">
+        <div><h3><a class="menu" href="/">Home</a></h3></div>
+        <div><h3><a class="menu" href="#FAQ">FAQ</a></h3></div>
+        <div><h3><a class="menu" href="#Leaderboard">Leaderboard</a></h3></div>
       </div>
     </div>
-    <br>
-    <hr>
 
-    <h3>What is Open Chennai?</h3>
-    <div>Open Chennai is a collective effort by the citizens of Chennai. We report and keep track of civic issues within
-      the city.
+    <hr>
+    <br>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+      <div fxFlex="60" style="text-align: center;">
+        <iframe style="height: 100%; min-height: 100%; width:80%; min-width: 80%" src="https://www.youtube-nocookie.com/embed/LMVhzLWFWNE?rel=0" frameborder="0"
+                allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div fxFlex="40" fxLayout="column">
+        <div style="margin-top: 8px;">
+          Open Chennai is a collective effort by the citizens of Chennai. We report and keep track of civic issues
+          within the city.
+        </div>
+        <div fxLayout="column" style="margin-top: 30px;">
+          <div>Follow us on social networks:</div>
+          <div style="margin-top: 24px;">
+            <a target="_blank" rel="noopener" class="social" href="https://twitter.com/openchennai">
+              <div><fa-icon [icon]="['fab', 'twitter']"></fa-icon> Twitter - OpenChennai</div>
+            </a>
+          </div>
+          <div style="margin-top: 24px;">
+            <a target="_blank" rel="noopener" class="social" href="https://www.facebook.com/openchennai">
+              <div><fa-icon [icon]="['fab', 'facebook']"></fa-icon> Facebook - OpenChennai</div>
+            </a>
+          </div>
+          <div style="margin-top: 24px;">
+            <a target="_blank" rel="noopener" class="social" href="https://www.instagram.com/openchennai">
+              <div><fa-icon [icon]="['fab', 'instagram']"></fa-icon> Instagram - OpenChennai</div>
+            </a>
+          </div>
+          <div style="margin-top: 24px;">
+            <a target="_blank" rel="noopener" class="social" href="https://github.com/OpenChennai">
+              <div><fa-icon [icon]="['fab', 'github']"></fa-icon> GitHub - https://github.com/OpenChennai</div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <br>
+    <br>
+    <hr>
+    <h2 id="FAQ" style="padding-top: 16px;">FAQ</h2>
 
     <h3>What do we gain by reporting and tracking issues?</h3>
     <div>We want to record concerns of citizens in an open manner and never lose track of them.</div>
@@ -137,5 +146,5 @@
 
     <app-leaderboard></app-leaderboard>
   </div>
-  <div fxFlex="20" fxFlex.xs="0"></div>
+  <div fxFlex="10" fxFlex.xs="0"></div>
 </div>
