@@ -11,9 +11,7 @@ export class IssueService {
 
   postIssue(repo, requestBody) {
     const url = this.app.BASE_URL + '/' + repo + '/issues';
-    const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json')
-    headers.append('Authorization', this.app.PAT);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.app.PAT);
     const options = { headers: headers};
 
     return this.http.post(url, requestBody, options);
