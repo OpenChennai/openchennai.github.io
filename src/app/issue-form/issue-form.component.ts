@@ -30,7 +30,7 @@ export class IssueFormComponent implements OnInit {
 
   onSubmit() {
     const title = this.issue.description.substring(0, 50);
-    const body = this.issue.name + '\r\n' + this.issue.link + '\r\n' + this.issue.description;
+    const body = 'Reporter: ' + this.issue.name + '\r\n' + 'Link: ' + this.issue.link + '\r\n\r\n' + this.issue.description;
     const requestBody = {
       'title': title,
       'body': body
