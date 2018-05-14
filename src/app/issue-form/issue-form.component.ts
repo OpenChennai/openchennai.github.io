@@ -21,7 +21,7 @@ export class IssueFormComponent implements OnInit {
     description: ''
   };
 
-  constructor(private app: AppComponent,
+  constructor(public app: AppComponent,
               private service: IssueService) {
   }
 
