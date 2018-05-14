@@ -9,6 +9,7 @@ import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 library.add(faTwitter);
 library.add(faFacebook);
@@ -18,7 +19,8 @@ library.add(faGithub);
 @NgModule({
   declarations: [
     AppComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
