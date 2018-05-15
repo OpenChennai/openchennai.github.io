@@ -10,6 +10,7 @@
            style="padding-top: 8px;">
         <div><h4><a class="menu" href="/">Home</a></h4></div>
         <div><h4><a class="menu" href="#FAQ">FAQ</a></h4></div>
+        <div><h4><a class="menu" href="#Map">Map</a></h4></div>
         <div><h4><a class="menu" href="#Leaderboard">Leaderboard</a></h4></div>
         <div><h4><a class="menu" href="#ReportIssue">Report Issue</a></h4></div>
       </div>
@@ -73,12 +74,13 @@
     <div>
       <div>
         <ul style="padding-left: 16px">
-          <div fxLayout="row" fxLayout.xs="column">
+          <div fxLayout="row" fxLayout.xs="column" style="padding-top: 16px;">
             <div fxFlex="50" fxFlex.xs="100" fxFlexOrder="2" fxFlexOrder.xs="1">
+              <h3 id="Map">Map of issues</h3>
               <app-map-view></app-map-view>
             </div>
             <div fxFlex="50" fxFlex.xs="100" fxFlexOrder="1" fxFlexOrder.xs="2">
-              <h3 id="FAQ" style="padding-top: 16px;">FAQ</h3>
+              <h3 id="FAQ">FAQ</h3>
 
               <li><h4>What do we gain by reporting and tracking issues?</h4></li>
               <div>We want to record concerns of citizens in an open manner and never lose track of them.</div>
