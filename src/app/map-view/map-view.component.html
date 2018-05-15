@@ -1,0 +1,10 @@
+<ngui-map
+  zoom="11"
+  center="13.045, 80.1707"
+  (mapReady$)="onMapReady($event)"
+  (mapClick)="onMapClick($event)"
+  (idle)="onIdle($event)"
+  mapTypeId="roadmap">
+
+  <marker *ngFor="let pos of positions" [position]="pos" (initialized$)="onMarkerInit($event)"></marker>
+</ngui-map>

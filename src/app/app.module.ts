@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { IssueFormComponent } from './issue-form/issue-form.component';
 import { FormsModule } from '@angular/forms';
+import { MapViewComponent } from './map-view/map-view.component';
+import { NguiMapModule } from '@ngui/map';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 library.add(faTwitter);
 library.add(faFacebook);
@@ -23,7 +27,8 @@ library.add(faGithub);
     AppComponent,
     LeaderboardComponent,
     HomeComponent,
-    IssueFormComponent
+    IssueFormComponent,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ library.add(faGithub);
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyB5-F7KikHZOoT322H_Dam1X6Gs7MNyWhM'})
   ],
   providers: [],
   bootstrap: [AppComponent]
