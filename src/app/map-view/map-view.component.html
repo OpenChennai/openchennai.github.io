@@ -6,5 +6,5 @@
   (idle)="onIdle($event)"
   mapTypeId="roadmap">
 
-  <marker *ngFor="let pos of positions" [position]="pos" (initialized$)="onMarkerInit($event)"></marker>
+  <marker *ngFor="let pos of app.positions" [position]="pos" (initialized$)="onMarkerInit($event)"></marker>
 </ngui-map>

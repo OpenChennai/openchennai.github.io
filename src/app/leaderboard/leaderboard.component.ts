@@ -21,6 +21,7 @@ export class LeaderboardComponent implements OnInit {
   unsortedReps: Reporter[] = [];
   reporters: Reporter[] = [];
   responsesReceived = 0;
+  positions: string[] = [];
 
   constructor(private service: LeaderboardService,
               private app: AppComponent) {
@@ -44,40 +45,57 @@ export class LeaderboardComponent implements OnInit {
       const body = content['body'];
 
       if (body !== null) {
-        const lines = body.split('\r\n', 2);
+        const lines = body.split('\r\n');
 
-        let name = '';
-        let link = '';
+        this.getLeaderboardDetails(lines);
 
-        if (lines[0].startsWith('Reporter: ')) {
-          const reporterArr = lines[0].split('Reporter: ');
-          name = reporterArr[1];
-        }
+        this.getLocations(lines);
+      }
+    });
+  }
 
-        if (lines[1].startsWith('Link: ')) {
-          const linkArr = lines[1].split('Link: ');
-          link = linkArr[1];
-        }
+  getLeaderboardDetails(lines) {
+    let name = '';
+    let link = '';
 
-        if (name !== '' && link !== '') {
-          let userExists = false;
-          if (this.unsortedReps != null) {
-            for (let i = 0; i < this.unsortedReps.length; i++) {
-              if (this.unsortedReps[i].name === name && this.unsortedReps[i].link === link) {
-                this.unsortedReps[i].count++;
-                userExists = true;
-                break;
-              }
-            }
-          }
+    if (lines[0].startsWith('Reporter: ')) {
+      const reporterArr = lines[0].split('Reporter: ');
+      name = reporterArr[1];
+    }
 
-          if (!userExists) {
-            const reporter: Reporter = { name: name, link: link, count: 1, rank: 0 };
-            this.unsortedReps.push(reporter);
+    if (lines[1].startsWith('Link: ')) {
+      const linkArr = lines[1].split('Link: ');
+      link = linkArr[1];
+    }
+
+    if (name !== '' && link !== '') {
+      let userExists = false;
+      if (this.unsortedReps != null) {
+        for (let i = 0; i < this.unsortedReps.length; i++) {
+          if (this.unsortedReps[i].name === name && this.unsortedReps[i].link === link) {
+            this.unsortedReps[i].count++;
+            userExists = true;
+            break;
           }
         }
       }
-    });
+
+      if (!userExists) {
+        const reporter: Reporter = { name: name, link: link, count: 1, rank: 0 };
+        this.unsortedReps.push(reporter);
+      }
+    }
+  }
+
+  getLocations(lines) {
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].startsWith('Location: ')) {
+        const extractedArray = lines[i].split('Location: ');
+        const latLong = extractedArray[1];
+        this.positions.push(latLong);
+      }
+    }
+    this.app.positions = this.positions;
   }
 
   checkAndPrepareTable() {

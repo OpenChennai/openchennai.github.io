@@ -24,5 +24,6 @@ export class AppComponent {
     // 'openchennai.github.io'
   ];
 
-  PAT = 'Bearer 1caebe31b73ccaa35ba73060ec117f96335bb15a';
+  PAT = '';
+  positions: string[];
 }

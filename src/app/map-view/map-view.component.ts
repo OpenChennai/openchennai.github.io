@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-map-view',
@@ -7,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapViewComponent implements OnInit {
 
-  positions: any[];
-
-  constructor() {
+  constructor(public app: AppComponent) {
   }
 
   ngOnInit() {
@@ -29,7 +28,7 @@ export class MapViewComponent implements OnInit {
   }
 
   onMapClick(event) {
-    this.positions.push(event.latLng);
+    // this.app.positions.push(event.latLng);
     event.target.panTo(event.latLng);
   }
 
