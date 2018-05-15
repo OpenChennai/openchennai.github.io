@@ -87,7 +87,7 @@ export class LeaderboardComponent implements OnInit {
   }
 
   sortResults() {
-    const sortedReps: Reporter[] = this.unsortedReps.sort((r1, r2) => (r1.count > r2.count) ? 1 : 0);
+    const sortedReps: Reporter[] = this.unsortedReps.sort((r1, r2) => (r1.count > r2.count) ? 0 : 1);
 
     let rank = 1;
     for (let i = 0; i < sortedReps.length; i++) {
