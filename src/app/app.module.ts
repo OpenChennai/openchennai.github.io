@@ -14,8 +14,6 @@ import { IssueFormComponent } from './issue-form/issue-form.component';
 import { FormsModule } from '@angular/forms';
 import { MapViewComponent } from './map-view/map-view.component';
 import { NguiMapModule } from '@ngui/map';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
 
 library.add(faTwitter);
 library.add(faFacebook);
