@@ -10,6 +10,11 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "keywords": [
+    "angular",
+    "google",
+    "map"
+  ],
   "dependencies": {
     "@angular/animations": "^6.0.3",
     "@angular/cdk": "^6.1.0",
@@ -22,13 +27,12 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@fortawesome/angular-fontawesome": "0.1.0-9",
+    "@fortawesome/angular-fontawesome": "0.1.0-10",
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
-    "@ngui/map": "^0.30.3",
-    "@types/googlemaps": "^3.30.8",
-    "core-js": "^2.5.6",
+    "@ngui/utils": "^0.8.1",
+    "core-js": "^2.5.7",
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
@@ -37,6 +41,8 @@
     "@angular/cli": "^6.0.5",
     "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
+    "@types/googlemaps": "^3.30.8",
+    "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",

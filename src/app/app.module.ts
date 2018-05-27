@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,7 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { IssueFormComponent } from './issue-form/issue-form.component';
 import { FormsModule } from '@angular/forms';
 import { MapViewComponent } from './map-view/map-view.component';
-import { NguiMapModule } from '@ngui/map';
+import { NguiMapModule } from './ngui-map';
+import {} from '@types/googlemaps';
 
 library.add(faTwitter);
 library.add(faFacebook);
