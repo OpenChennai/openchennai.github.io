@@ -1,11 +1,13 @@
 <ngui-map
   zoom="12"
   center="13.045, 80.2200"
-  (mapReady$)="onMapReady($event)"
-  (mapClick)="onMapClick($event)"
-  (idle)="onIdle($event)"
   mapTypeId="roadmap"
   style="height: 600px;">
 
-  <marker *ngFor="let pos of app.positions" [position]="pos" (initialized$)="onMarkerInit($event)"></marker>
+  <marker *ngFor="let issue of app.issues" [position]="issue.location" (click)="clicked($event)"></marker>
+
+  <info-window id="iw">
+    <div>{{ issue.title }}</div>
+    <div><a target="_blank" rel="noopener" href="{{issue.url}}">{{issue.url}}</a></div>
+  </info-window>
 </ngui-map>

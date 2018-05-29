@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LeaderboardService } from './leaderboard.service';
 import { AppComponent } from '../app.component';
+import { MapIssue } from '../map-issue';
 
 interface Reporter {
   name: string;
@@ -21,7 +22,7 @@ export class LeaderboardComponent implements OnInit {
   unsortedReps: Reporter[] = [];
   reporters: Reporter[] = [];
   responsesReceived = 0;
-  positions: string[] = [];
+  issues: MapIssue[] = [];
 
   constructor(private service: LeaderboardService,
               private app: AppComponent) {
@@ -43,18 +44,20 @@ export class LeaderboardComponent implements OnInit {
   processData() {
     this.data.forEach((content, _) => {
       const body = content['body'];
+      const issueTitle = content['title'];
+      const issueUrl = content['html_url'];
 
       if (body !== null) {
         const lines = body.split('\r\n');
 
-        this.getLeaderboardDetails(lines);
+        this.setLeaderboardDetails(lines);
 
-        this.getLocations(lines);
+        this.setLocations(lines, issueTitle, issueUrl);
       }
     });
   }
 
-  getLeaderboardDetails(lines) {
+  setLeaderboardDetails(lines) {
     let name = '';
     let link = '';
 
@@ -87,15 +90,16 @@ export class LeaderboardComponent implements OnInit {
     }
   }
 
-  getLocations(lines) {
+  setLocations(lines, title, url) {
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].startsWith('Location: ')) {
         const extractedArray = lines[i].split('Location: ');
         const latLong = extractedArray[1];
-        this.positions.push(latLong);
+        const issue: MapIssue = new MapIssue(title, url, latLong);
+        this.issues.push(issue);
       }
     }
-    this.app.positions = this.positions;
+    this.app.issues = this.issues;
   }
 
   checkAndPrepareTable() {

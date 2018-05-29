@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MapIssue } from './map-issue';
 
 @Component({
   selector: 'app-root',
@@ -25,5 +26,5 @@ export class AppComponent {
   ];
 
   PAT = '';
-  positions: string[];
+  issues: MapIssue[];
 }

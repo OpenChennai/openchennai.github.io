@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { MapIssue } from '../map-issue';
 
 @Component({
   selector: 'app-map-view',
@@ -8,28 +9,28 @@ import { AppComponent } from '../app.component';
 })
 export class MapViewComponent implements OnInit {
 
+  showMarker: boolean = false;
+
+  issue: MapIssue = new MapIssue("", "", null);
+
   constructor(public app: AppComponent) {
   }
 
   ngOnInit() {
   }
 
-  onMapReady(map) {
-    console.log('map', map);
-    console.log('markers', map.markers);  // to get all markers as an array
-  }
+  clicked({target: marker}) {
+    const lat = Number((marker.getPosition().lat()).toFixed(6));
+    const lng = Number((marker.getPosition().lng()).toFixed(6));
 
-  onIdle(event) {
-    console.log('map', event.target);
-  }
-
-  onMarkerInit(marker) {
-    console.log('marker', marker);
-  }
-
-  onMapClick(event) {
-    // this.app.positions.push(event.latLng);
-    event.target.panTo(event.latLng);
+    for (let i = 0; i < this.app.issues.length; i++) {
+      if (this.app.issues[i].location === lat + ', ' + lng) {
+        this.issue = this.app.issues[i];
+        this.showMarker = true;
+        marker.nguiMapComponent.openInfoWindow('iw', marker);
+        break;
+      }
+    }
   }
 
 }
