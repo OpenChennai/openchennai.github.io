@@ -10,7 +10,7 @@ export class LeaderboardService {
   }
 
   getIssues(repo) {
-    const url = this.app.BASE_URL + '/' + repo + '/issues';
+    const url = this.app.BASE_URL + '/' + repo + '/issues?state=all';
     return this.http.get(url);
   }
 }

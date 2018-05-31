@@ -71,7 +71,7 @@ export class LeaderboardComponent implements OnInit {
       link = linkArr[1];
     }
 
-    if (name !== '' && link !== '') {
+    if (name !== '') {
       let userExists = false;
       if (this.unsortedReps != null) {
         for (let i = 0; i < this.unsortedReps.length; i++) {
