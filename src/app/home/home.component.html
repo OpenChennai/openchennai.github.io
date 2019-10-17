@@ -2,84 +2,59 @@
   <div fxFlex="5" fxFlex.xs="0"></div>
   <div fxFlex="90" fxFlex.xs="100" id="main-content">
     <div fxLayout="row" fxLayout.xs="column">
-      <div fxFlex="20" fxFlex.xs="100">
+      <div fxFlex="100" style="height: 40px; text-align: center;">
         <img style="max-width: 100%; max-height: 100%;" alt="Angular Logo"
              src="../assets/OpenChennaiHorizontalLogo.png">
       </div>
-      <div fxFlex="80" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutGap="20px"
-           style="padding-top: 8px;">
-        <div><h4><a class="menu" href="/">Home</a></h4></div>
-        <div><h4><a class="menu" href="#Events">Events in Chennai</a></h4></div>
-      </div>
     </div>
+    <iframe src="https://calendar.google.com/calendar/embed?mode=DAY&amp;dates=20191017/20191017&amp;src=ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com&ctz=Asia%2FKolkata"
+              style="border: 0" width="100%" height="650px" frameborder="0" scrolling="no">
+      </iframe>
 
-    <hr>
-    <br>
-
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-      <div fxFlex="60" style="text-align: center;">
-        <iframe style="height: 100%; min-height: 100%; width:80%; min-width: 80%"
-                src="https://www.youtube-nocookie.com/embed/LMVhzLWFWNE?rel=0" frameborder="0"
-                allow="encrypted-media" allowfullscreen></iframe>
-      </div>
-      <div fxFlex="40" fxLayout="column">
-        <div style="margin-top: 8px;">
-          Open Chennai is a collective effort by the citizens of Chennai. We report and keep track of civic issues
-          within the city.
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+        <div fxFlex="60">
+          <div>
+            Open Chennai provides you with a collection of latest events happening in Chennai.
+          </div>
         </div>
-        <div fxLayout="column" style="margin-top: 30px;">
-          <div>Follow us on social networks:</div>
-          <div style="margin-top: 24px;">
-            <a target="_blank" rel="noopener" class="social" href="https://twitter.com/openchennai">
-              <div>
-                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
-                Twitter - OpenChennai
+        <div fxFlex="45" fxLayout="column">
+          <div fxLayout="column">
+            <div>Follow us on social networks to receive the latest updates:</div>
+            <div fxLayout="row">
+              <div fxFlex="grow">
+                <a target="_blank" rel="noopener" class="social" href="https://twitter.com/openchennai">
+                  <div>
+                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                    Twitter
+                  </div>
+                </a>
               </div>
-            </a>
+              <div fxFlex="grow">
+                <a target="_blank" rel="noopener" class="social" href="https://www.facebook.com/openchennai">
+                  <div>
+                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                    Facebook
+                  </div>
+                </a>
+              </div>
+              <div fxFlex="grow">
+                <a target="_blank" rel="noopener" class="social" href="https://www.instagram.com/openchennai">
+                  <div>
+                    <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+                    Instagram
+                  </div>
+                </a>
+              </div>
           </div>
-          <div style="margin-top: 24px;">
-            <a target="_blank" rel="noopener" class="social" href="https://www.facebook.com/openchennai">
-              <div>
-                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
-                Facebook - OpenChennai
-              </div>
-            </a>
-          </div>
-          <div style="margin-top: 24px;">
-            <a target="_blank" rel="noopener" class="social" href="https://www.instagram.com/openchennai">
-              <div>
-                <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
-                Instagram - OpenChennai
-              </div>
-            </a>
-          </div>
-          <div style="margin-top: 24px;">
-            <a target="_blank" rel="noopener" class="social" href="https://github.com/OpenChennai">
-              <div>
-                <fa-icon [icon]="['fab', 'github']"></fa-icon>
-                GitHub - https://github.com/OpenChennai
-              </div>
-            </a>
           </div>
         </div>
       </div>
+
+  <!--    <h2 id="Events" style="padding-top: 16px;">Events in Chennai</h2>-->
+
+      <br>
+      <br>
+
     </div>
-
-    <h2 id="Events" style="padding-top: 16px;">Events in Chennai</h2>
-    <iframe src="https://calendar.google.com/calendar/embed?mode=DAY&amp;dates=20190116/20190116&amp;src=ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com&ctz=Asia%2FKolkata"
-            style="border: 0" width="100%" height="600" frameborder="0" scrolling="no">
-    </iframe>
-
-    <br>
-    <br>
-
-    <p>Link to open in Google Calendar app: <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar?cid=aWFsaDc0bm1uNmFyZzJyOXJscnNwMjN1cTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">https://calendar.google.com/calendar?cid=aWFsaDc0bm1uNmFyZzJyOXJscnNwMjN1cTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ</a></p>
-    <p>Public Url to calendar: <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/embed?src=ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com&ctz=Asia%2FKolkata">https://calendar.google.com/calendar/embed?src=ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com&ctz=Asia%2FKolkata</a></p>
-    <p>Link to .ics file in iCal format: <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/ical/ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com/public/basic.ics">https://calendar.google.com/calendar/ical/ialh74nmn6arg2r9rlrsp23uq4%40group.calendar.google.com/public/basic.ics</a></p>
-
-    <br>
-    <br>
-    <hr>
-  </div>
   <div fxFlex="5" fxFlex.xs="0"></div>
 </div>
